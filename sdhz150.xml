@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="sdhz153"
+           fetch="https://github.com/sdhz153"
+	   revision="refs/heads/android-8.1" />
+
+  <project path="build/make" name="android_build" groups="pdk" remote="sdhz153" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="android" name="android" remote="sdhz153" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="sdhz153" />
+  <project path="vendor/omni" name="android_vendor_omni" remote="sdhz153" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="sdhz153" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="sdhz153" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="sdhz153" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="sdhz153" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="sdhz153" />
+  <project path="packages/apps/OmniGears" name="android_packages_apps_OmniGears" remote="sdhz153" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="sdhz153" />
+  <!-- sdhz150 updat-->
+  <project path="packages/providers/PhoneLocationProvider" name="packages_provider_PhoneLocationProvider" remote="sdhz153" />
+  <project path="external/suda/SudaSDKs" name="external_suda_SudaSDKs" remote="sdhz153" />
+  <project path="frameworks/opt/datetimepicker" name="frameworks_opt_datetimepicker" groups="pdk-cw-fs,pdk-fs" remote="sdhz153" />
+  <project path="packages/apps/Calendar" name="packages_apps_Calendar" remote="sdhz153" />
+</manifest>
